@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Módulo 6: Grid, Flexbox y Layout</title>
+  <link rel="stylesheet" href="modulo6.css" />
+</head>
+<body>
+  <header>
+    <h1>Módulo 6: Layout, Flexbox y Grid</h1>
+    <p>¡Diseñá interfaces modernas como un profesional! 🎨</p>
+  </header>
+
+  <main>
+    <section id="layout">
+      <h2>📐 ¿Qué es un Layout?</h2>
+      <p>Un layout es la forma en que distribuimos elementos en una página web. Es como acomodar muebles en una habitación: buscamos orden y armonía.</p>
+      <p>CSS nos da herramientas como <code>display</code>, <code>position</code>, <code>float</code>, <code>flex</code> y <code>grid</code> para organizar contenidos.</p>
+
+        <h3>🎥 Ejemplo en video</h3>
+        <p>Mirá este video donde se muestran comparaciones entre layouts tradicionales y modernos usando Flex y Grid:</p>
+
+        <div class="video-container">
+           <iframe src="https://www.youtube.com/embed/fYq5PXgSsbE" title="Flexbox y Grid en acción" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="flexbox">
+      <h2>🤸 Flexbox</h2>
+      <p>Flexbox (Flexible Box) nos permite alinear elementos en una dimensión: horizontal o vertical. Ideal para menús, barras, tarjetas, etc.</p>
+
+      <div class="flex-ejemplo">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <pre><code>
+        .flex-ejemplo {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        }
+        </code></pre>
+        <h3>🎥 Ejemplo en video FLEXBOX</h3>
+        
+        <div class="video-container">
+           <iframe src="https://www.youtube.com/embed/8OJ32ZZTBFM?si=7ITneZQJBvt9bGv3" title="Flexbox y Grid en acción" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+
+    </section>
+
+    <section id="grid">
+      <h2>🔲 Grid</h2>
+      <p>CSS Grid es un sistema de diseño bidimensional. Podés ordenar elementos en filas y columnas como si usaras una hoja cuadriculada.</p>
+
+      <div class="grid-ejemplo">
+        <div>A</div><div>B</div><div>C</div><div>D</div>
+      </div>
+
+      <pre><code>
+.grid-ejemplo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+      </code></pre>
+
+        <h3>🎥 Ejemplo en video sobre GRID</h3>
+        
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/xNZNHdplmxk?si=EpJ5l_josKIjR_Wo" title="Flexbox y Grid en acción" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+
+    </section>
+    <a href="index.html" class="volver">Volver al inicio</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alfabetización en Manejo de la Información · Módulo 6</p>
+  </footer>
+</body>
+</html>

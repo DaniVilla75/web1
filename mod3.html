@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo 3 - HTML: La Estructura de una Página Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="modulo3.css" />
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="mb-4 text-primary">Módulo 3: HTML - La Estructura de una Página Web</h1>
+    <div class="row">
+      <aside class="col-md-3 mb-4">
+        <div class="indice p-3 bg-white border rounded">
+          <h5 class="text-primary">Índice</h5>
+          <ul class="nav flex-column nav-index">
+            <li class="nav-item"><a href="#intro" class="nav-link">Introducción</a></li>
+            <li class="nav-item"><a href="#sec1" class="nav-link">1. Conceptos básicos</a></li>
+            <li class="nav-item"><a href="#sec2" class="nav-link">2. Estructura básica</a></li>
+            <li class="nav-item"><a href="#sec3" class="nav-link">3. Elementos fundamentales</a></li>
+            <li class="nav-item"><a href="#sec4" class="nav-link">4. Atributos</a></li>
+            <li class="nav-item"><a href="#sec5" class="nav-link">5. Estructura semántica</a></li>
+            <li class="nav-item"><a href="#sec6" class="nav-link">6. Formularios</a></li>
+            <li class="nav-item"><a href="#sec7" class="nav-link">7. Tablas</a></li>
+            <li class="nav-item"><a href="#sec8" class="nav-link">8. Multimedia</a></li>
+            <li class="nav-item"><a href="#sec9" class="nav-link">9. Metadatos y SEO</a></li>
+            <li class="nav-item"><a href="#sec10" class="nav-link">10. Accesibilidad</a></li>
+            <li class="nav-item"><a href="#sec11" class="nav-link">11. Integración</a></li>
+          </ul>
+        </div>
+      </aside>
+      <main class="col-md-9">
+
+      <div id="intro" class="seccion">
+        <h2>Introducción a HTML</h2>
+        <p>HTML (HyperText Markup Language) es el lenguaje fundamental para crear páginas web. Es un lenguaje de marcado que define la estructura y el contenido de una página web.</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/gEwZvLIZhR0" title="Video introductorio a HTML" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div id="sec1" class="seccion">
+        <h2>1. Conceptos básicos</h2>
+        <div class="accordion" id="conceptosBasicos">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingHist">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHist" aria-expanded="true" aria-controls="collapseHist">
+                Historia y Versiones de HTML
+              </button>
+            </h2>
+            <div id="collapseHist" class="accordion-collapse collapse show" aria-labelledby="headingHist" data-bs-parent="#conceptosBasicos">
+              <div class="accordion-body">
+                <p><strong>Los orígenes de HTML (1989-1991)</strong></p>
+                <ul>
+                  <li>Creado por Tim Berners-Lee en el CERN.</li>
+                  <li>1989: propuso un sistema de hipertexto basado en Internet.</li>
+                  <li>1990: desarrolló el navegador/editor WorldWideWeb.</li>
+                  <li>1991: publicó "HTML Tags".</li>
+                </ul>
+                <p><strong>HTML 2.0 (1995)</strong></p>
+                <ul>
+                  <li>Primera versión estandarizada por el IETF.</li>
+                  <li>Soportaba formularios simples.</li>
+                </ul>
+                <p><strong>HTML 3.2 (1997)</strong></p>
+                <ul>
+                  <li>Desarrollado por el W3C.</li>
+                  <li>Incluía tablas, applets, texto fluido con imágenes.</li>
+                </ul>
+                <p><strong>HTML 4.01 (1999)</strong></p>
+                <ul>
+                  <li>Introdujo separación entre estructura y presentación.</li>
+                  <li>Tres variantes: Strict, Transitional, Frameset.</li>
+                </ul>
+                <p><strong>XHTML (2000)</strong></p>
+                <ul>
+                  <li>Basado en XML, más estricto.</li>
+                  <li>Menos tolerante a errores, en desuso.</li>
+                </ul>
+                <p><strong>HTML5 (2014 - Actual estándar)</strong></p>
+                <ul>
+                  <li>Nuevos elementos semánticos: <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, etc.</li>
+                  <li>Soporte para video/audio, canvas, almacenamiento local.</li>
+                  <li>Mejoras en formularios, compatibilidad móvil y accesibilidad.</li>
+                </ul>
+                <p><strong>HTML Living Standard</strong></p>
+                <ul>
+                  <li>Desarrollo continuo sin versiones fijas, mantenido por WHATWG.</li>
+                </ul>
+                <p><strong>Futuro de HTML</strong></p>
+                <ul>
+                  <li>Web Components, APIs modernas, PWAs, accesibilidad mejorada.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEditores">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEditores" aria-expanded="false" aria-controls="collapseEditores">
+                Editores de Código Recomendados
+              </button>
+            </h2>
+            <div id="collapseEditores" class="accordion-collapse collapse" aria-labelledby="headingEditores" data-bs-parent="#conceptosBasicos">
+              <div class="accordion-body">
+                <p><strong>1. Visual Studio Code (VS Code)</strong></p>
+                <ul>
+                  <li>Autocompletado inteligente, depuración, integración Git.</li>
+                  <li>Extensiones recomendadas: Live Server, Auto Rename Tag, Prettier.</li>
+                  <li><a href="https://code.visualstudio.com/" target="_blank">Descargar VS Code</a></li>
+                </ul>
+                <p><strong>2. Sublime Text</strong></p>
+                <ul>
+                  <li>Editor minimalista, muy rápido, personalización con JSON.</li>
+                  <li><a href="https://www.sublimetext.com/" target="_blank">Descargar Sublime Text</a></li>
+                </ul>
+                <p><strong>3. Atom</strong> (discontinuado)</p>
+                <ul>
+                  <li>Interfaz moderna, integración con GitHub, modo Teletype.</li>
+                  <li><a href="https://github.com/atom/atom/releases/tag/v1.60.0" target="_blank">Descargar última versión estable</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sec2" class="seccion">
+        <h2>2. Estructura básica de un documento HTML</h2>
+        <pre><code>&lt;!DOCTYPE html&gt;
+          &lt;html lang="es"&gt;
+          &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+          &lt;title&gt;Título de la página&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          &lt;!-- Contenido de la página --&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;</code></pre>
+        <p>Explicación de:</p>
+        <ul>
+          <li><code>&lt;!DOCTYPE html&gt;</code>: tipo de documento</li>
+          <li><code>&lt;html&gt;</code>: contenedor principal</li>
+          <li><code>&lt;head&gt;</code>: metadatos</li>
+          <li><code>&lt;body&gt;</code>: contenido visible</li>
+        </ul>
+      </div>
+
+      <div id="sec3" class="seccion">
+        <h2>3. Elementos y etiquetas fundamentales</h2>
+        <ul>
+          <li>Encabezados <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></li>
+          <li><code>&lt;p&gt;</code> Párrafos</li>
+          <li><code>&lt;br&gt;</code> Saltos de línea, <code>&lt;hr&gt;</code> línea horizontal</li>
+          <li><code>&lt;strong&gt;</code>, <code>&lt;b&gt;</code> Negrita, <code>&lt;em&gt;</code>, <code>&lt;i&gt;</code> Cursiva</li>
+          <li>Listas: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></li>
+          <li>Enlaces: <code>&lt;a href=""&gt;</code></li>
+          <li>Imágenes: <code>&lt;img src="" alt=""&gt;</code></li>
+        </ul>
+        <a class="btn btn-primary" href="practica3.html">Ir a Práctica</a>
+      </div>
+
+      <div id="sec4" class="seccion">
+        <h2>4. Atributos HTML</h2>
+        <div class="accordion" id="accordionConceptos">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="atributosHeading">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#atributosCollapse" aria-expanded="true" aria-controls="atributosCollapse">
+                Atributos HTML: Qué Son y Para Qué Sirven
+              </button>
+            </h2>
+            <div id="atributosCollapse" class="accordion-collapse collapse show" aria-labelledby="atributosHeading" data-bs-parent="#accordionConceptos">
+              <div class="accordion-body">
+                <p><strong>¿Qué son los atributos?</strong> Son modificadores que agregan información o funcionalidad a las etiquetas HTML. Se escriben dentro de la etiqueta de apertura como <code>nombre="valor"</code>.</p>
+                <h5>Atributos Globales</h5>
+                <ul>
+                  <li><strong>id:</strong> Identificador único de un elemento. <code>&lt;div id="principal"&gt;</code></li>
+                  <li><strong>class:</strong> Asigna clases a un elemento. <code>&lt;p class="texto"&gt;</code></li>
+                  <li><strong>style:</strong> Estilo en línea. <code>&lt;h1 style="color:red"&gt;</code></li>
+                  <li><strong>title:</strong> Texto emergente al pasar el mouse. <code>&lt;img title="Logo"&gt;</code></li>
+                </ul>
+                <h5>Atributos Específicos</h5>
+                <ul>
+                  <li><strong>href:</strong> Enlace en <code>&lt;a&gt;</code>. <code>&lt;a href="https://..."&gt;</code></li>
+                  <li><strong>src:</strong> Ruta de imagen o script. <code>&lt;img src="imagen.jpg"&gt;</code></li>
+                  <li><strong>alt:</strong> Texto alternativo para imágenes. <code>&lt;img alt="Descripción"&gt;</code></li>
+                </ul>
+                <h5>Atributos Booleanos</h5>
+                <ul>
+                  <li><strong>disabled:</strong> Desactiva el elemento. <code>&lt;button disabled&gt;</code></li>
+                  <li><strong>readonly:</strong> Solo lectura. <code>&lt;input readonly&gt;</code></li>
+                  <li><strong>required:</strong> Campo obligatorio. <code>&lt;input required&gt;</code></li>
+                </ul>
+                <p>Estos atributos permiten personalizar y controlar el comportamiento y estilo de cada elemento HTML.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="sec5" class="seccion">
+        <h2>5. Estructura Semántica</h2>
+        <div class="accordion accordion-flush" id="estructuraSemantica">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-header" aria-expanded="false" aria-controls="flush-collapse-header">
+                &lt;header&gt; 👤 (La cabeza)
+              </button>
+            </h2>
+            <div id="flush-collapse-header" class="accordion-collapse collapse" aria-labelledby="flush-heading-header" data-bs-parent="#estructuraSemantica">
+              <div class="accordion-body">
+                Es como la cabeza de tu página. Aquí va el logo, el título y a veces el menú de navegación. <br>
+                <strong>Ejemplo:</strong> El nombre de tu página y el menú principal.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading-nav">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-nav" aria-expanded="false" aria-controls="flush-collapse-nav">
+                &lt;nav&gt; 🚦 (El GPS de tu web)
+              </button>
+            </h2>                      
+            <div id="flush-collapse-nav" class="accordion-collapse collapse" aria-labelledby="flush-heading-nav" data-bs-parent="#estructuraSemantica">
+              <div class="accordion-body">
+                Es la barra de navegación con enlaces que te llevan a otras partes. <br>
+                <strong>Ejemplo:</strong> Links de "Inicio", "Productos", "Contacto".
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading-main">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-main" aria-expanded="false" aria-controls="flush-collapse-main">
+                &lt;main&gt; 💪 (El corazón y músculos)
+              </button>
+            </h2>
+            <div id="flush-collapse-main" class="accordion-collapse collapse" aria-labelledby="flush-heading-main" data-bs-parent="#estructuraSemantica">
+              <div class="accordion-body">
+                Contenido principal de la página. Debe haber solo uno. <br>
+                <strong>Ejemplo:</strong> Lista de videos en YouTube, productos en una tienda.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading-article">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-article" aria-expanded="false" aria-controls="flush-collapse-article">
+                &lt;article&gt; 📰 (Un post o noticia independiente)
+              </button>
+            </h2>
+            <div id="flush-collapse-article" class="accordion-collapse collapse" aria-labelledby="flush-heading-article" data-bs-parent="#estructuraSemantica">
+              <div class="accordion-body">
+                Como un artículo de periódico o post de blog que tiene sentido por sí solo. <br>
+                <strong>Ejemplo:</strong> Tweet, entrada de blog, comentario en un foro.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading-section">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-section" aria-expanded="false" aria-controls="flush-collapse-section">
+                &lt;section&gt; 🏗️ (Una zona temática)
+              </button>
+            </h2>
+            <div id="flush-collapse-section" class="accordion-collapse collapse" aria-labelledby="flush-heading-section" data-bs-parent="#estructuraSemantica">
+              <div class="accordion-body">
+                Divide el contenido en secciones lógicas como capítulos de un libro. <br>
+                <strong>Ejemplo:</strong> "Últimas noticias", "Testimonios".
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading-aside">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-aside" aria-expanded="false" aria-controls="flush-collapse-aside">
+               &lt;aside&gt; 📢 (Publicidad o info extra)
+              </button>
+            </h2>
+            <div id="flush-collapse-aside" class="accordion-collapse collapse" aria-labelledby="flush-heading-aside" data-bs-parent="#estructuraSemantica">
+              <div class="accordion-body">
+                Contenido relacionado pero no esencial. <br>
+                <strong>Ejemplo:</strong> Barra lateral de blog con anuncios o artículos sugeridos.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading-footer">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-footer" aria-expanded="false" aria-controls="flush-collapse-footer">
+               &lt;footer&gt; 👟 (Los pies de la página)
+              </button>
+            </h2>
+            <div id="flush-collapse-footer" class="accordion-collapse collapse" aria-labelledby="flush-heading-footer" data-bs-parent="#estructuraSemantica">
+              <div class="accordion-body">
+                Parte inferior de la página. <br>
+                <strong>Ejemplo:</strong> "© 2024 MiWeb - Síguenos en Instagram".
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading-figure">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-figure" aria-expanded="false" aria-controls="flush-collapse-figure">
+                &lt;figure&gt; y &lt;figcaption&gt; 📸 (Imagen + descripción)
+              </button>
+            </h2>
+            <div id="flush-collapse-figure" class="accordion-collapse collapse" aria-labelledby="flush-heading-figure" data-bs-parent="#estructuraSemantica">
+              <div class="accordion-body">
+                <code>&lt;figure&gt;</code> envuelve una imagen o gráfico, y <code>&lt;figcaption&gt;</code> es el pie de foto. <br>
+                <strong>Ejemplo:</strong>
+                <pre><code>&lt;figure&gt;
+                  &lt;img src="perro.jpg" alt="Un perro jugando"&gt;
+                  &lt;figcaption&gt;Mi perro Loki en el parque&lt;/figcaption&gt;
+                &lt;/figure&gt;</code></pre>
+                <strong>¿Por qué usar esto?</strong>
+                <ul>
+                  <li>Mejor SEO: los buscadores entienden mejor tu contenido.</li>
+                  <li>Más accesibilidad: los lectores de pantalla interpretan mejor la estructura.</li>
+                  <li>Código más limpio y entendible.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="practica3.html">Ir a Práctica</a>
+      </div>
+
+      <div id="sec6" class="seccion">
+        <h2>6. Formularios</h2>
+        <p>Los formularios HTML son herramientas esenciales para recolectar información de los usuarios en una página web. A continuación, te explico cada elemento con definiciones sencillas y ejemplos prácticos.</p>
+
+      <!-- 1. form -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">&lt;form&gt; con atributos <code>action</code> y <code>method</code></h5>
+          <p><strong>Definición:</strong> La etiqueta <code>&lt;form&gt;</code> define un formulario. Los atributos más importantes son:</p>
+          <ul>
+           <li><code>action</code>: URL donde se enviarán los datos.</li>
+           <li><code>method</code>: Método de envío (GET o POST).</li>
+          </ul>
+
+          <p><strong>Ejemplo:</strong></p>
+
+          <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace; overflow-x: auto;">
+            <button onclick="navigator.clipboard.writeText(document.getElementById('codigoForm').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+            <code id="codigoForm">
+              &lt;form action="/procesar-datos" method="POST"&gt;
+              &lt;! Aquí los campos del formulario &gt;
+              &lt;/form&gt;
+            </code>
+          </div>
+          <p>📌 En este caso, cuando el usuario envíe el formulario, los datos irán a <strong>/procesar-datos</strong> usando el método POST.</p>
+        </div>
+      </div>
+      <!-- 2. Campos input -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Campos &lt;input&gt;</h5>
+          <p><strong>Definición:</strong> permite crear diferentes tipos de campos para que el usuario ingrese datos. Algunos tipos comunes:</p>
+          <ul>
+            <li><code>text</code>: Texto normal</li>
+            <li><code>password</code>: Contraseña oculta</li>
+            <li><code>email</code>: Correo electrónico</li>
+            <li><code>number</code>: Solo números</li>
+          </ul>
+
+          <p><strong>Ejemplo:</strong></p>
+
+          <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace; overflow-x: auto;">
+            <button onclick="navigator.clipboard.writeText(document.getElementById('codigoInput').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+            <code id="codigoInput">
+             &lt;input type="text" placeholder="Nombre"&gt;
+             &lt;input type="password" placeholder="Contraseña"&gt;
+             &lt;input type="email" placeholder="Correo electrónico"&gt;
+            </code>
+          </div>
+
+          <p>🔹 El atributo <strong>placeholder</strong> muestra un texto de ayuda dentro del campo.</p>
+
+        </div>
+      </div>
+      <!-- 3. textarea -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">&lt;textarea&gt;</h5>
+          <p><strong>Definición:</strong> Para ingresar textos largos.</p>
+          <pre><code>&lt;textarea rows="4" cols="50" placeholder="Escribe tu mensaje aquí..."&gt;&lt;/textarea&gt;</code></pre>
+
+          <p><strong>Ejemplo:</strong></p>
+
+          <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace; overflow-x: auto;">
+            <button onclick="navigator.clipboard.writeText(document.getElementById('codigoTextarea').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+            <code id="codigoTextarea">
+             &lt;textarea rows="4" cols="50" placeholder="Escribe tu mensaje aquí..."&gt;&lt;/textarea&gt;
+            </code>
+          </div>
+          <p>📏 <strong>rows</strong> y <strong>cols</strong> definen el tamaño del área de texto.</p>
+        </div>
+      </div>
+      <!-- 4. select -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Desplegables: &lt;select&gt; y &lt;option&gt;</h5>
+          <p><strong>Definición:</strong> Permiten elegir una opción predefinida.</p>
+          <p><strong>Ejemplo:</strong></p>
+          <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace; overflow-x: auto;">
+            <button onclick="navigator.clipboard.writeText(document.getElementById('codigoSelect').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+            <code id="codigoSelect">
+              &lt;select&gt;
+              &lt;option value="mx"&gt;México&lt;/option&gt;
+              &lt;option value="es"&gt;España&lt;/option&gt;
+              &lt;option value="ar"&gt;Argentina&lt;/option&gt;
+              &lt;/select&gt;
+            </code>
+          </div>
+          <p>🌎 El usuario selecciona una opción y se envía el <strong>value</strong> correspondiente.</p>
+        </div>
+      </div>
+      <!-- 5. Botones -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Botones: &lt;button&gt; y &lt;input type="submit"&gt;</h5>
+          <p><strong>Definición:</strong> Permiten enviar el formulario o ejecutar acciones.</p>
+          <ul>
+            <li><strong>button:</strong> <button>crea un botón personalizable.</button></li>
+            <li><strong>input type="submit"</strong> <input type="submit"> envía el formulario.</li>
+          </ul>
+          <p><strong>Ejemplo:</strong></p>
+          <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace; overflow-x: auto;">
+            <button onclick="navigator.clipboard.writeText(document.getElementById('codigoBotones').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+            <code id="codigoBotones">
+              &lt;button type="button"&gt;Solo un botón&lt;/button&gt;
+              &lt;input type="submit" value="Enviar"&gt;
+            </code>
+          </div>
+          <p>🚀 El botón de <strong>submit</strong> procesa el formulario cuando se hace clic.</p>
+        </div>
+      </div>
+      <!-- 6. Validación -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Validación: <code>required</code>, <code>pattern</code>, <code>min</code>, <code>max</code> ✅</h5>
+          <p><strong>Definición:</strong> atributos que ayudan a validar datos antes de enviarlos:</p>
+          <ul>
+            <li><strong>required:</strong> obliga a llenar el campo.</li>
+            <li><strong>pattern:</strong> define una expresión regular para validar (ej: formato de teléfono).</li>
+            <li><strong>min/max:</strong> establece límites numéricos.</li>
+          </ul>
+          <p><strong>Ejemplo:</strong></p>
+          <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace; overflow-x: auto;">
+            <button onclick="navigator.clipboard.writeText(document.getElementById('codigoValidacion').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+            <code id="codigoValidacion">
+              &lt;input type="text" required placeholder="Nombre (obligatorio)"&gt;
+              &lt;input type="number" min="18" max="99" placeholder="Edad"&gt;
+              &lt;input type="tel" pattern="[0-9]{10}" placeholder="Teléfono (10 dígitos)"&gt;
+            </code>
+          </div>
+          <p>✅ Si el usuario no cumple las reglas, el formulario no se envía.</p>      
+        </div>
+      </div>
+      <!-- 7. label -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">&lt;label&gt; para accesibilidad</h5>
+          <p><strong>Definición:</strong> Asocia un texto descriptivo a un campo del formulario, mejorando la accesibilidad.</p>
+          <p><strong>Ejemplo:</strong></p>
+          <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace; overflow-x: auto;">
+            <button onclick="navigator.clipboard.writeText(document.getElementById('codigoLabel').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+            <code id="codigoLabel">
+              &lt;label for="nombre"&gt;Nombre completo:&lt;/label&gt;
+              &lt;input type="text" id="nombre"&gt;
+            </code>
+          </div>
+          <p>👉 <em>Haciendo clic en el texto <strong>"Nombre completo"</strong>, el cursor se posiciona en el campo.</em></p>      
+        </div>
+      </div>
+      <!-- 8. fieldset y legend -->
+       <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Agrupación con &lt;fieldset&gt; y &lt;legend&gt;</h5>
+          <p><strong>Definición:</strong> Organizan los formularios largos en bloques lógicos.</p>
+          <ul>
+            <li><strong>fieldset>:</strong> agrupa elementos relacionados.</li>
+            <li><strong>legend>:</strong> añade un título al grupo.</li>
+          </ul>
+          <p><strong>Ejemplo:</strong></p>
+          <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace; overflow-x: auto;">
+            <button onclick="navigator.clipboard.writeText(document.getElementById('codigoFieldset').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+            <code id="codigoFieldset">
+              &lt;fieldset&gt;
+              &lt;legend&gt;Información personal&lt;/legend&gt;
+              &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+              &lt;input type="text" id="nombre"&gt;
+              &lt;label for="edad"&gt;Edad:&lt;/label&gt;
+              &lt;input type="number" id="edad"&gt;
+              &lt;/fieldset&gt;
+            </code>
+          </div>
+          <p>📌 Útil para organizar formularios largos en secciones.</p>
+        </div>
+       </div>
+       <div class="card border-success mb-3">
+        <div class="card-body">
+          <h5 class="card-title text-success">🌟 Ejemplo completo de formulario</h5>
+          <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace; overflow-x: auto;">
+            <button onclick="navigator.clipboard.writeText(document.getElementById('codigoFinal').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+            <code id="codigoFinal">
+              &lt;form action="/registro" method="POST"&gt;
+              &lt;fieldset&gt;
+              &lt;legend&gt;Registro de usuario&lt;/legend&gt;
+    
+              &lt;label for="usuario"&gt;Usuario:&lt;/label&gt;
+              &lt;input type="text" id="usuario" required&gt;
+    
+              &lt;label for="clave"&gt;Contraseña:&lt;/label&gt;
+              &lt;input type="password" id="clave" required&gt;
+    
+              &lt;label for="pais"&gt;País:&lt;/label&gt;
+              &lt;select id="pais"&gt;
+              &lt;option value="mx"&gt;México&lt;/option&gt;
+              &lt;option value="es"&gt;España&lt;/option&gt;
+              &lt;/select&gt;
+    
+              &lt;label for="comentarios"&gt;Comentarios:&lt;/label&gt;
+              &lt;textarea id="comentarios"&gt;&lt;/textarea&gt;
+    
+              &lt;input type="submit" value="Registrarse"&gt;
+              &lt;/fieldset&gt;
+              &lt;/form&gt;
+            </code>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+      <div id="sec7" class="seccion">
+        <h2>7. Tablas</h2>
+        <p>Las tablas permiten mostrar información en filas y columnas. HTML ofrece etiquetas específicas para construir estructuras organizadas, desde datos simples hasta informes complejos.</p>
+
+        <!-- 1. Estructura básica -->
+        <h5 class="text-success">📌 Estructura básica</h5>
+        <p>Las tablas en HTML se crean con la etiqueta <strong>table</strong>. Dentro de ella, cada fila se define con <strong>tr</strong> (table row), y cada celda con <strong>td</strong> (table data). Para celdas de encabezado usamos <strong>th</strong> (table header).</p>
+        <div class="table-responsive mb-3">
+          <table class="table table-bordered text-center">
+            <thead class="table-light">
+              <tr><th>Nombre</th><th>Edad</th><th>Ciudad</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>María</td><td>25</td><td>Madrid</td></tr>
+              <tr><td>Carlos</td><td>30</td><td>Barcelona</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace; overflow-x: auto;">
+          <button onclick="navigator.clipboard.writeText(document.getElementById('tabla1').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+          <code id="tabla1">
+            &lt;table&gt;
+            &lt;tr&gt;
+            &lt;th&gt;Nombre&lt;/th&gt;
+            &lt;th&gt;Edad&lt;/th&gt;
+            &lt;th&gt;Ciudad&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+            &lt;td&gt;María&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;Madrid&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+            &lt;td&gt;Carlos&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+            &lt;td&gt;Barcelona&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/table&gt;
+          </code>
+        </div>
+        <hr>
+
+        <!-- 2. Secciones de tabla -->
+        <h5 class="text-success">📌 Secciones de tabla: thead, tbody, tfoot</h5>
+        <p>Estas etiquetas ayudan a organizar la tabla en secciones lógicas:</p>
+        <ul>
+          <li><strong>thead</strong>: contiene los encabezados de la tabla</li>
+          <li><strong>tbody</strong>: contiene el cuerpo principal de datos</li>
+          <li><strong>tfoot</strong>: contiene el pie de tabla (totales, resúmenes)</li>
+        </ul>
+        <div class="table-responsive mb-3">
+          <table class="table table-bordered text-center">
+            <thead class="table-secondary">
+              <tr><th>Producto</th><th>Precio</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Laptop</td><td>€899</td></tr>
+              <tr><td>Teléfono</td><td>€599</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><th>Total</th><td>€1498</td></tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace; overflow-x: auto;">
+        <button onclick="navigator.clipboard.writeText(document.getElementById('tabla2').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+        <code id="tabla2">
+          &lt;table&gt;
+          &lt;thead&gt;
+          &lt;tr&gt;
+          &lt;th&gt;Producto&lt;/th&gt;
+          &lt;th&gt;Precio&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;Laptop&lt;/td&gt;&lt;td&gt;€899&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;Teléfono&lt;/td&gt;&lt;td&gt;€599&lt;/td&gt;&lt;/tr&gt;
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+          &lt;tr&gt;&lt;th&gt;Total&lt;/th&gt;&lt;td&gt;€1498&lt;/td&gt;&lt;/tr&gt;
+          &lt;/tfoot&gt;
+          &lt;/table&gt;
+        </code>    
+      </div>
+      <p><strong>Explicación:</strong> Esto ayuda a los navegadores y motores de búsqueda a entender mejor la estructura de tu tabla.</p>
+      <hr>
+
+      <!-- 3. Combinación de celdas -->
+      <h5 class="text-success">📌 Combinar celdas: rowspan y colspan</h5>
+      <p>Permiten que una celda ocupe varias columnas o filas:</p>
+      <ul>
+        <li><strong>colspan</strong>: combina celdas horizontalmente (columnas).</li>
+        <li><strong>rowspan</strong>: Combina celdas verticalmente (filas).</li>
+      </ul>
+      <div class="table-responsive mb-3">
+         <table class="table table-bordered text-center">
+            <tr>
+             <th rowspan="2">ID</th>
+             <th colspan="2">Notas</th>
+            </tr>
+            <tr>
+             <th>Primer Parcial</th>
+             <th>Segundo Parcial</th>
+            </tr>
+            <tr>
+             <td>001</td>
+             <td>85</td>
+             <td>90</td>
+            </tr>
+        </table>
+      </div>
+      <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace; overflow-x: auto;">
+      <button onclick="navigator.clipboard.writeText(document.getElementById('tabla3').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+      <code id="tabla3">
+        &lt;table&gt;
+        &lt;tr&gt;
+        &lt;th rowspan="2"&gt;ID&lt;/th&gt;
+        &lt;th colspan="2"&gt;Notas&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;th&gt;Primer Parcial&lt;/th&gt;
+        &lt;th&gt;Segundo Parcial&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;001&lt;/td&gt;
+        &lt;td&gt;85&lt;/td&gt;
+        &lt;td&gt;90&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+      </code>
+    </div>
+    <hr>
+
+  <!-- 4. Tabla con estilos -->
+  <h5 class="text-success">📌 Ejemplo completo con estilos</h5>
+  <div class="table-responsive mb-3">
+    <table class="table table-bordered text-center table-striped">
+      <caption class="fw-bold">Horario de Clases - Segundo Semestre</caption>
+      <thead class="table-success">
+        <tr><th rowspan="2">Hora</th><th colspan="5">Días de la semana</th></tr>
+        <tr><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8:00 - 9:30</td><td>Matemáticas</td><td>Historia</td><td rowspan="2">Laboratorio</td><td>Literatura</td><td>Educación Física</td>
+        </tr>
+        <tr>
+          <td>9:30 - 11:00</td><td>Física</td><td>Química</td><td>Inglés</td><td>Arte</td>
+        </tr>
+      </tbody>
+      <tfoot><tr><td colspan="6">Horario sujeto a cambios</td></tr></tfoot>
+    </table>
+  </div>
+  <div class="position-relative bg-dark text-white rounded p-3" style="font-family: monospace; overflow-x: auto;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('tabla4').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="tabla4">
+&lt;table&gt;
+  &lt;caption&gt;Horario de Clases - Segundo Semestre&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th rowspan="2"&gt;Hora&lt;/th&gt;
+      &lt;th colspan="5"&gt;Días de la semana&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Lunes&lt;/th&gt;
+      &lt;th&gt;Martes&lt;/th&gt;
+      &lt;th&gt;Miércoles&lt;/th&gt;
+      &lt;th&gt;Jueves&lt;/th&gt;
+      &lt;th&gt;Viernes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8:00 - 9:30&lt;/td&gt;
+      &lt;td&gt;Matemáticas&lt;/td&gt;
+      &lt;td&gt;Historia&lt;/td&gt;
+      &lt;td rowspan="2"&gt;Laboratorio&lt;/td&gt;
+      &lt;td&gt;Literatura&lt;/td&gt;
+      &lt;td&gt;Educación Física&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9:30 - 11:00&lt;/td&gt;
+      &lt;td&gt;Física&lt;/td&gt;
+      &lt;td&gt;Química&lt;/td&gt;
+      &lt;td&gt;Inglés&lt;/td&gt;
+      &lt;td&gt;Arte&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan="6"&gt;Horario sujeto a cambios&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+    </code>
+  </div>
+  <p class="mt-4">🔍 Tip: Usá <code>caption</code> para dar título a la tabla, <code>colspan</code> y <code>rowspan</code> para unir celdas. ¡Hacelo legible y accesible!</p>
+  </div>
+
+  <div id="sec8" class="seccion">
+  <h2>8. Multimedia e Incrustación</h2>
+  <p>HTML permite enriquecer las páginas con contenido multimedia como imágenes, audio, video, gráficos vectoriales y contenidos incrustados.</p>
+
+  <!-- 1. Imágenes -->
+  <h5 class="text-success">📷 1. Imágenes: &lt;img&gt; y formatos recomendados</h5>
+  <p><strong>&lt;img&gt;</strong> se usa para insertar imágenes. Requiere al menos el atributo <code>src</code> que especifica la ruta de la imagen y el alternativo <code>alt</code>.</p>
+  <p><strong>Formatos:</strong> JPEG (fotos), PNG (transparencia), WebP (óptimo), SVG (vectorial).</p>
+  <img src="foto-perfil.jpg" alt="Foto de perfil del usuario" width="300" height="200" class="mb-3 border rounded">
+  <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace; overflow-x: auto;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('img1').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="img1">
+&lt;img src="foto-perfil.jpg" alt="Foto de perfil del usuario" width="300" height="200"&gt;
+    </code>
+  </div>
+
+  <!-- 2. Mapas de imagen -->
+  <h5 class="text-success">🗺️ 2. Mapas de imagen: &lt;map&gt; y &lt;area&gt;</h5>
+  <p>Permiten definir zonas clickeables dentro de una imagen. Se usa junto con <strong>img</strong> añadiendo el atributo <strong>usemap</strong>.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace; overflow-x: auto;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('imgmap').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="imgmap">
+&lt;img src="mapa-mundo.png" alt="Mapa del mundo" usemap="#mapamundo"&gt;
+
+&lt;map name="mapamundo"&gt;
+  &lt;area shape="rect" coords="34,44,270,350" alt="América" href="america.html"&gt;
+  &lt;area shape="circle" coords="337,300,44" alt="África" href="africa.html"&gt;
+  &lt;area shape="poly" coords="100,100,200,50,300,100,350,300" alt="Europa" href="europa.html"&gt;
+&lt;/map&gt;
+    </code>
+  </div>
+
+  <!-- 3. Audio -->
+  <h5 class="text-success">🎵 3. Audio: &lt;audio&gt;</h5>
+  <p>Estos elementos permiten incrustar contenido multimedia directamente en la página sin necesidad de plugins.</p>
+  <audio controls class="mb-3">
+    <source src="musica.mp3" type="audio/mpeg">
+    <source src="musica.ogg" type="audio/ogg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace; overflow-x: auto;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('audio').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="audio">
+&lt;audio controls&gt;
+  &lt;source src="musica.mp3" type="audio/mpeg"&gt;
+  &lt;source src="musica.ogg" type="audio/ogg"&gt;
+  Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;
+    </code>
+  </div>
+
+  <!-- 4. Video -->
+  <h5 class="text-success">🎥 4. Video: &lt;video&gt;</h5>
+  <video width="320" height="240" controls poster="preview.jpg" class="mb-3">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    Tu navegador no soporta el elemento de video.
+  </video>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace; overflow-x: auto;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('video').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="video">
+&lt;video width="320" height="240" controls poster="preview.jpg"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  Tu navegador no soporta el elemento de video.
+&lt;/video&gt;
+    </code>
+  </div>
+
+  <!-- 5. iframe -->
+  <h5 class="text-success">🌐 5. Contenido externo: &lt;iframe&gt;</h5>
+  <p>Permite incrustar otro documento HTML dentro de la página actual. Se usa comúnmente para videos de YouTube, mapas de Google, etc.</p>
+  <div class="ratio ratio-16x9 mb-3">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace; overflow-x: auto;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('iframe').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="iframe">
+&lt;iframe 
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+  width="560" 
+  height="315" 
+  frameborder="0" 
+  allowfullscreen&gt;
+&lt;/iframe&gt;
+    </code>
+  </div>
+
+  <!-- 6. SVG -->
+  <h5 class="text-success">✏️ 6. Gráficos vectoriales: &lt;svg&gt;</h5>
+  <p>SVG (Scalable Vector Graphics) es un formato de imagen vectorial basado en XML que puede ser manipulado con CSS y JavaScript.</p>
+  <svg width="100" height="100" class="mb-3">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    <text x="50" y="55" text-anchor="middle" fill="black">Hola</text>
+  </svg>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace; overflow-x: auto;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('svg1').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="svg1">
+&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /&gt;
+  &lt;text x="50" y="55" text-anchor="middle" fill="black"&gt;Hola&lt;/text&gt;
+&lt;/svg&gt;
+    </code>
+  </div>
+
+  <svg width="200" height="200" class="mb-3">
+    <rect x="50" y="50" width="100" height="100" fill="blue" />
+    <polygon points="100,10 40,198 190,78 10,78 160,198" fill="red" />
+  </svg>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace; overflow-x: auto;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('svg2').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="svg2">
+&lt;svg width="200" height="200"&gt;
+  &lt;rect x="50" y="50" width="100" height="100" fill="blue" /&gt;
+  &lt;polygon points="100,10 40,198 190,78 10,78 160,198" fill="red" /&gt;
+&lt;/svg&gt;
+    </code>
+  </div>
+
+  <!-- Recursos -->
+  <h5 class="text-success">🔗 Recursos útiles y consejos</h5>
+  <p><strong>Licencias:</strong> Asegurate de usar imágenes y videos libres de derechos (ej: CC0, Creative Commons).</p>
+  <p><strong>Optimización:</strong> Comprimí tus recursos con herramientas como TinyPNG (imágenes) o HandBrake (videos).</p>
+  <p><strong>Imágenes gratis:</strong></p>
+  <ul>
+    <li><a href="https://unsplash.com" target="_blank">Unsplash</a></li>
+    <li><a href="https://pexels.com" target="_blank">Pexels</a></li>
+    <li><a href="https://pixabay.com" target="_blank">Pixabay</a></li>
+    <li><a href="https://openverse.org" target="_blank">Openverse</a></li>
+    <li><a href="https://undraw.co" target="_blank">Undraw</a></li>
+    <li><a href="https://www.humaaans.com" target="_blank">Humaaans</a></li>
+  </ul>
+
+  <p><strong>Videos gratuitos:</strong></p>
+  <ul>
+    <li><a href="https://www.pexels.com/videos/" target="_blank">Pexels Videos</a></li>
+    <li><a href="https://pixabay.com/videos/" target="_blank">Pixabay Videos</a></li>
+    <li><a href="https://coverr.co" target="_blank">Coverr</a></li>
+    <li><a href="https://mixkit.co" target="_blank">Mixkit</a></li>
+  </ul>
+
+  <p><strong>Herramientas útiles:</strong></p>
+  <ul>
+    <li><a href="https://www.photopea.com" target="_blank">Photopea</a> (edición de imágenes)</li>
+    <li><a href="https://www.canva.com" target="_blank">Canva</a> (diseño visual)</li>
+    <li><a href="https://clipchamp.com" target="_blank">Clipchamp</a> (edición de video)</li>
+    <li><a href="https://cloudconvert.com" target="_blank">CloudConvert</a> (conversión de formatos)</li>
+  </ul>
+
+  <p class="mt-3">✨ <em>Recordá siempre dar crédito si usás recursos de terceros. ¡Y optimizá tus archivos para que tu web cargue rápido!</em></p>
+</div>
+<hr>
+
+<div id="sec9" class="seccion">
+  <h2>9. Metadatos y SEO Básico 🔍</h2>
+  <p>Los metadatos ayudan a describir el contenido de una página web. El SEO (<em>Search Engine Optimization</em>) mejora su visibilidad en los resultados de búsqueda.</p>
+
+  <!-- Título -->
+  <h5 class="text-success">1. &lt;title&gt;: Título de la página</h5>
+  <p>El título aparece en la pestaña del navegador y es fundamental para el SEO.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('seo-title').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="seo-title">&lt;title&gt;Guía de HTML5 - Aprende a crear páginas web&lt;/title&gt;</code>
+  </div>
+  <ul>
+    <li>✔ Entre 50-60 caracteres.</li>
+    <li>✔ Incluir palabras clave.</li>
+    <li>✔ Atractivo para el usuario.</li>
+  </ul>
+
+  <!-- Meta description -->
+  <h5 class="text-success">2. Metaetiquetas &lt;meta&gt;</h5>
+  <p><strong>a)</strong> <code>&lt;meta name="description"&gt;</code>: Resumen que aparece en Google.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('seo-desc').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="seo-desc">&lt;meta name="description" content="Aprende HTML5 desde cero con ejemplos prácticos. Tutorial paso a paso para principiantes."&gt;</code>
+  </div>
+  <ul>
+    <li>✔ Máximo 160 caracteres.</li>
+    <li>✔ Incluir palabras clave.</li>
+    <li>✔ Redacción atractiva para generar clics.</li>
+  </ul>
+
+  <p><strong>b)</strong> <code>&lt;meta name="keywords"&gt;</code>: Palabras clave (hoy en desuso).</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('seo-keywords').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="seo-keywords">&lt;meta name="keywords" content="HTML, CSS, JavaScript, tutorial web, programación"&gt;</code>
+  </div>
+
+  <!-- Favicon -->
+  <h5 class="text-success">3. Favicon</h5>
+  <p>Es el ícono que aparece en la pestaña del navegador.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('seo-favicon').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="seo-favicon">&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>
+  </div>
+  <p><strong>Formatos:</strong> .ico, .png, .svg (16x16px o 32x32px)</p>
+
+  <!-- Open Graph -->
+  <h5 class="text-success">4. Open Graph para redes sociales</h5>
+  <p>Estas metaetiquetas permiten personalizar cómo se muestra tu página al compartirla en redes.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('seo-og').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="seo-og">
+&lt;meta property="og:title" content="Aprende HTML5 en 2024"&gt;
+&lt;meta property="og:description" content="Curso completo de HTML5 para principiantes"&gt;
+&lt;meta property="og:image" content="https://ejemplo.com/imagen.jpg"&gt;
+&lt;meta property="og:url" content="https://ejemplo.com"&gt;
+    </code>
+  </div>
+
+  <!-- Semántica -->
+  <h5 class="text-success">5. Estructura Semántica y SEO</h5>
+  <p>Usar etiquetas semánticas mejora el SEO y la accesibilidad:</p>
+  <ul>
+    <li><code>&lt;header&gt;</code> – Cabecera</li>
+    <li><code>&lt;nav&gt;</code> – Menú</li>
+    <li><code>&lt;main&gt;</code> – Contenido principal</li>
+    <li><code>&lt;article&gt;</code> – Artículo o post</li>
+    <li><code>&lt;section&gt;</code> – Agrupación temática</li>
+    <li><code>&lt;aside&gt;</code> – Contenido complementario</li>
+    <li><code>&lt;footer&gt;</code> – Pie de página</li>
+  </ul>
+  <p><strong>Ejemplo completo:</strong></p>
+  <div class="position-relative bg-dark text-white rounded p-3" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('seo-semantic').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="seo-semantic">
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Mi Blog de Tecnología&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;a href="/"&gt;Inicio&lt;/a&gt;
+      &lt;a href="/tutoriales"&gt;Tutoriales&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Cómo aprender HTML5&lt;/h2&gt;
+      &lt;p&gt;Guía completa para principiantes...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;© 2024 Mi Blog&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+    </code>
+  </div>
+
+  <!-- Buenas prácticas -->
+  <h5 class="text-success">📌 Buenas Prácticas SEO</h5>
+  <ul>
+    <li>✅ <strong>Títulos</strong> claros y descriptivos</li>
+    <li>✅ <strong>Descripciones</strong> concisas y llamativas</li>
+    <li>✅ <strong>Semántica</strong> con HTML5</li>
+    <li>✅ <strong>Alt en imágenes</strong></li>
+    <li>✅ <strong>Enlaces internos/externos</strong></li>
+    <li>✅ <strong>Velocidad de carga</strong> optimizada</li>
+  </ul>
+
+  <p class="mt-3">💡 Aplicar estos elementos mejora la visibilidad de tu web en Google y en redes sociales. ¡Hacelo parte de tu rutina al crear páginas!</p>
+</div>
+<hr>
+
+<div id="sec10" class="seccion">
+  <h2>10. Buenas Prácticas y Accesibilidad Web ♿💡</h2>
+  <p>La accesibilidad web garantiza que todas las personas, incluyendo quienes tienen discapacidades, puedan navegar y entender el contenido. Estas prácticas siguen las recomendaciones WCAG.</p>
+
+  <!-- 1. HTML válido -->
+  <h5 class="text-success">1. HTML válido y bien formado</h5>
+  <p>Un documento HTML debe seguir reglas de sintaxis: etiquetas cerradas, atributos bien escritos y estructura jerárquica coherente.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('html-valido').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="html-valido">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Página Accesible&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Bienvenido&lt;/h1&gt;
+  &lt;p&gt;Este es un párrafo correctamente cerrado.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code>
+  </div>
+  <p><strong>Errores comunes:</strong></p>
+  <ul>
+    <li>❌ Etiquetas sin cerrar</li>
+    <li>❌ Atributos mal escritos (ej: <code>&lt;img alt&gt;</code> sin comillas)</li>
+  </ul>
+  <p>📎 Usá el <a href="https://validator.w3.org" target="_blank">Validador W3C</a> para comprobar tu HTML.</p>
+
+  <!-- 2. Etiquetas semánticas -->
+  <h5 class="text-success">2. Uso adecuado de etiquetas semánticas</h5>
+  <p>Las etiquetas semánticas <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, etc., ayudan a estructurar el contenido y mejoran la accesibilidad.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('semantico').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="semantico">
+&lt;header&gt;
+  &lt;h1&gt;Noticias del día&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Título de la noticia&lt;/h2&gt;
+    &lt;p&gt;Contenido importante...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+    </code>
+  </div>
+  <ul>
+    <li>❌ No usar <code>&lt;div&gt;</code> para todo.</li>
+    <li>❌ No saltarse niveles de encabezado (<code>&lt;h1&gt;</code> seguido de <code>&lt;h3&gt;</code>).</li>
+  </ul>
+
+  <!-- 3. Atributos ARIA -->
+  <h5 class="text-success">3. Atributos ARIA</h5>
+  <p>Los atributos ARIA mejoran la accesibilidad en interfaces dinámicas.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('aria1').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="aria1">&lt;button aria-label="Cerrar ventana"&gt;X&lt;/button&gt;</code>
+  </div>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('aria2').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="aria2">&lt;div class="decoración" aria-hidden="true"&gt;&lt;/div&gt;</code>
+  </div>
+  <p>También se usa <code>role</code> para definir tipos de elementos (<code>role="navigation"</code>, <code>role="alert"</code>...).</p>
+
+  <!-- 4. Texto alternativo -->
+  <h5 class="text-success">4. Texto alternativo en imágenes</h5>
+  <p>El atributo <code>alt</code> permite describir imágenes a lectores de pantalla o si no se cargan.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('alt1').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="alt1">&lt;img src="grafico.jpg" alt="Gráfico de ventas 2024: aumento del 20%"&gt;</code>
+  </div>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('alt2').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="alt2">&lt;img src="divisor.jpg" alt=""&gt;</code>
+  </div>
+  <p><strong>Errores comunes:</strong> <code>alt="imagen"</code>, o directamente no usar <code>alt</code>.</p>
+
+  <!-- 5. Contraste -->
+  <h5 class="text-success">5. Contraste adecuado (CSS)</h5>
+  <p>El texto debe tener suficiente contraste con el fondo. La relación recomendada es al menos 4.5:1.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('contraste1').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="contraste1">
+body {
+  background: white;
+  color: black; /* Contraste 21:1 */
+}
+    </code>
+  </div>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('contraste2').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="contraste2">
+body {
+  background: lightgray;
+  color: white; /* Contraste bajo */
+}
+    </code>
+  </div>
+  <p>🎨 Usá <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a> para validar tus combinaciones.</p>
+
+  <!-- 6. Navegación con teclado -->
+  <h5 class="text-success">6. Navegación con teclado</h5>
+  <p>El sitio debe poder usarse con teclado (Tab, Enter, flechas) para quienes no usan mouse.</p>
+  <p><strong>Prácticas clave:</strong></p>
+  <ul>
+    <li>✔ Usar <code>tabindex="0"</code> para elementos enfocados</li>
+    <li>✔ Usar <code>tabindex="-1"</code> para saltar foco</li>
+    <li>✔ Estilos claros para <code>:focus</code></li>
+    <li>❌ No usar tabindex mayor a 0</li>
+  </ul>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('tabindex').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="tabindex">
+<nav>
+  <ul>
+    <li><a href="/" tabindex="0">Inicio</a></li>
+    <li><a href="/contacto" tabindex="0">Contacto</a></li>
+  </ul>
+</nav>
+    </code>
+  </div>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-4" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('focus-css').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="focus-css">
+button:focus {
+  outline: 2px solid blue;
+}
+    </code>
+  </div>
+
+  <!-- Resumen -->
+  <h5 class="text-success">📌 Resumen de buenas prácticas</h5>
+  <ul>
+    <li>✅ HTML válido</li>
+    <li>✅ Etiquetas semánticas</li>
+    <li>✅ Atributos ARIA donde haga falta</li>
+    <li>✅ Texto alternativo en imágenes</li>
+    <li>✅ Contraste legible</li>
+    <li>✅ Navegación accesible con teclado</li>
+  </ul>
+
+  <p>Aplicar estos principios mejora la experiencia para todos los usuarios. ¡Un web accesible es un web más inclusivo! 🌍</p>
+</div>
+<hr>
+
+<div id="sec11" class="seccion">
+  <h2>11. Integración con otros lenguajes 🔗</h2>
+  <p>HTML no trabaja solo: se puede combinar con otros lenguajes como CSS, JavaScript o lenguajes de servidor como PHP, Python o Node.js para lograr sitios más atractivos y funcionales.</p>
+
+  <!-- CSS y JS -->
+  <h5 class="text-success">1. Relación con CSS y JavaScript</h5>
+  <p><strong>CSS:</strong> define los estilos visuales de la página.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('css-rel').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="css-rel">&lt;link rel="stylesheet" href="estilos.css"&gt;</code>
+  </div>
+  <p><strong>JavaScript:</strong> agrega interactividad (validaciones, animaciones, eventos).</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('js-rel').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="js-rel">&lt;script src="script.js"&gt;&lt;/script&gt;</code>
+  </div>
+
+  <!-- Style inline -->
+  <h5 class="text-success">2. Atributo <code>style</code> (uso puntual)</h5>
+  <p>El atributo <code>style</code> permite aplicar estilos directamente en una etiqueta HTML. Es útil para pruebas rápidas o estilos puntuales.</p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('inline-style').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="inline-style">&lt;p style="color: blue; font-size: 16px;"&gt;Texto azul&lt;/p&gt;</code>
+  </div>
+  <p><strong>⚠️ Recomendación:</strong> Para proyectos grandes, usá siempre CSS externo.</p>
+
+  <!-- Eventos -->
+  <h5 class="text-success">3. Eventos básicos en HTML</h5>
+  <p>Los eventos permiten ejecutar código cuando ocurre una acción (clic, carga, teclado, etc.).</p>
+  <p><strong>Ejemplo con <code>onclick</code>:</strong></p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-2" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('onclick').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="onclick">&lt;button onclick="alert('Hola')"&gt;Click&lt;/button&gt;</code>
+  </div>
+
+  <p><strong>Ejemplo con <code>onload</code>:</strong></p>
+  <div class="position-relative bg-dark text-white rounded p-3 mb-3" style="font-family: monospace;">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('onload').innerText)" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2">📋 Copiar</button>
+    <code id="onload">&lt;body onload="console.log('Página cargada')"&gt;</code>
+  </div>
+
+  <p>✨ Estos conceptos permiten construir páginas <strong>dinámicas, personalizables</strong> y mucho más atractivas.</p>
+  </div>    
+
+
+      <div class="d-flex justify-content-between mt-4">        
+        <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 Alfabetización en Manejo de la Información · Módulo 3</p>
+  </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

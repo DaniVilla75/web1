@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Módulo 1 Cultura Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">  
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    .icono {
+      font-size: 2rem;
+      color: #0d6efd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Alfabetización en Manejo de la Información</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MÓDULO 1 -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h1 class="mb-3 text-primary">Módulo 1 Cultura Digital y Sociedad del Conocimiento</h1>
+      <p class="lead">Objetivo: Brindar a los estudiantes una comprensión crítica y contextual de la sociedad digital actual.</p>
+
+      <!-- Tarjetas de contenido -->
+      <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+        <!-- Digitalización -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-file-earmark-code icono"></i> Digitalización de la información</h5>
+              <p class="card-text">Representación binaria, ventajas (acceso, velocidad, copia) y desafíos (obsolescencia, privacidad).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organización de la información -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-globe icono"></i> Organización de la información en la Web</h5>
+              <p class="card-text">WWW, HTML, HTTP, hipertexto, hipermedia, hipervínculos, email, RSS, podcast, chat.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sociedad del conocimiento -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-diagram-3 icono"></i> Sociedad del conocimiento</h5>
+              <p class="card-text">Conceptos clave: sociedad red, de la información, del aprendizaje y del conocimiento.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cibercultura -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-person-video2 icono"></i> Cibercultura</h5>
+              <p class="card-text">Identidad digital, memes, cultura participativa y su impacto en la comunicación digital.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Acordeón: Evolución de la Web -->
+      <div class="accordion mt-5" id="webEvolution">
+        <h4 class="mb-3 text-primary">Evolución de la Web</h4>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+              Web 1.0 Lectura pasiva
+            </button>
+          </h2>
+          <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#webEvolution">
+            <div class="accordion-body">
+              Sitios estáticos con navegación unidireccional. Ejemplo: primeras páginas HTML sin interacción.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+              Web 2.0 Participación y colaboración
+            </button>
+          </h2>
+          <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#webEvolution">
+            <div class="accordion-body">
+              Aparición de redes sociales, blogs, YouTube. Usuarios generan contenido.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+              Web 3.0 Web semántica
+            </button>
+          </h2>
+          <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#webEvolution">
+            <div class="accordion-body">
+              Datos interconectados, motores inteligentes, comprensión del contenido por parte de las máquinas.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+              Web 4.0 Inteligencia artificial
+            </button>
+          </h2>
+          <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#webEvolution">
+            <div class="accordion-body">
+              Personalización avanzada, asistentes virtuales, IA que predice y automatiza procesos.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actividad -->
+      <div class="mt-5">
+        <h4 class="text-primary">Actividad sugerida</h4>
+        <p><strong>Título:</strong> Línea de tiempo de la Web</p>
+        <p>En grupos, crear una línea de tiempo visual con ejemplos de cada etapa de la Web. Puede hacerse en papel, mural colaborativo digital o con herramientas como Canva, Padlet, etc.</p>
+      </div>
+
+      <div class="mt-5 text-end">
+        <a href="mod2.html" class="btn btn-primary">
+          Siguiente módulo <i class="bi bi-arrow-right-circle"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

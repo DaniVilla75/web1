@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo 5: JavaScript</title>
+  <link rel="stylesheet" href="modulo5.css" />
+</head>
+<body>
+  <header>
+    <h1>Módulo 5: JavaScript</h1>
+    <p>Conceptos básicos para empezar a programar</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>🧩 Tipos de datos</h2>
+      <pre><code>let texto = "Hola";
+let numero = 42;
+let activo = true;
+let nada = null;
+let indefinido;</code></pre>
+      <p>📦 Los tipos de datos son como los ingredientes en una receta. Tenés diferentes tipos según lo que querés guardar: texto (como nombres), números (edades), booleanos (sí o no), y más. Entender qué tipo estás usando te ayuda a saber qué podés hacer con ellos.</p>
+    </section>
+    <section class="card">
+      <h2>🔣 Operadores</h2>
+      <pre><code>// Aritméticos
+let suma = 5 + 3;
+
+// Comparación
+let igual = (5 === "5"); // false
+
+// Lógicos
+let acceso = true && false; // false</code></pre>
+      <p>🛠️ Los operadores son como herramientas. Te permiten sumar, comparar, o combinar información. Por ejemplo, si querés saber si un alumno aprobó (`nota >= 6`), necesitás un operador de comparación.</p>
+    </section>
+
+    <section class="card">
+      <h2>✍️ Funciones</h2>
+      <pre><code>function saludar(nombre) {
+  alert("Hola " + nombre);
+}</code></pre>
+      <p>📞 Una función es un conjunto de instrucciones que se puede usar cuando lo necesites. Como una receta que podés repetir cuantas veces quieras, pero cambiando el ingrediente (nombre) 👨‍🍳</p>
+    </section>
+
+    <section class="card">
+      <h2>🔀 Condicionales</h2>
+      <pre><code>let edad = 20;
+if (edad >= 18) {
+  console.log("Sos mayor de edad");
+} else {
+  console.log("Sos menor de edad");
+}</code></pre>
+      <p>🚦 Las condicionales le dan al programa la capacidad de tomar decisiones, como si fuera un semáforo: si está verde, seguí; si está rojo, frená.</p>
+    </section>
+
+    <section class="card">
+      <h2>🔁 Bucles</h2>
+      <pre><code>for (let i = 1; i <= 5; i++) {
+  console.log("Número " + i);
+}</code></pre>
+      <p>🔄 Un bucle es como repetir una canción cinco veces sin apretar el botón. Repite código automáticamente hasta que le digas “¡basta!” 😄</p>
+    </section>
+
+    <section class="card">
+      <h2>🎨 Arrays</h2>
+      <pre><code>let colores = ["rojo", "verde", "azul"];
+console.log(colores[0]); // "rojo"</code></pre>
+      <p>📦 Un array es como una caja con compartimentos: guarda varios datos juntos y podés acceder al que quieras según el número de posición.</p>
+    </section>
+    <section class="card">
+      <h2>📬 Formularios y validación</h2>
+      <pre><code>&lt;form id="form"&gt;
+  &lt;input type="text" id="nombre" /&gt;
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+
+document.getElementById("form").addEventListener("submit", e =&gt; {
+  e.preventDefault();
+  let nombre = document.getElementById("nombre").value;
+  alert(nombre ? "Hola " + nombre : "Ingresá tu nombre");
+});</code></pre>
+      <p>📬 Un formulario es la manera de que el usuario se comunique con tu página. Con JavaScript podés validar si escribió bien su nombre, evitar que se envíe vacío o saludarlo por su nombre. Es lo que usarías en una inscripción, por ejemplo.</p>
+    </section>
+
+    <section class="card">
+      <h2>🏹 Funciones Flecha</h2>
+      <pre><code>const saludar = nombre =&gt; console.log("Hola " + nombre);
+saludar("Luz");</code></pre>
+      <p>⚡ Las funciones flecha son una forma moderna y rápida de escribir funciones. Son como una versión resumida de las funciones clásicas, muy usadas en aplicaciones web actuales.</p>
+    </section>
+
+    <section class="card">
+      <h2>⏱️ Temporizadores</h2>
+      <pre><code>setTimeout(() =&gt; {
+  alert("Hola después de 3 segundos");
+}, 3000);
+
+let cuenta = 0;
+let reloj = setInterval(() =&gt; {
+  console.log(cuenta++);
+  if (cuenta &gt; 4) clearInterval(reloj);
+}, 1000);</code></pre>
+      <p>⏲️ Los temporizadores permiten ejecutar algo después de cierto tiempo o de forma repetida. Son útiles para crear pausas, animaciones o contar el tiempo en juegos.</p>
+    </section>
+
+    <section class="card">
+      <h2>🎮 Juego: Adiviná el número</h2>
+      <p>Estoy pensando en un número del 1 al 10... ¿cuál será?</p>
+      <input type="number" id="adivina-input" min="1" max="10" placeholder="Tu número" />
+      <button id="btn-adivinar">Adivinar</button>
+      <div id="feedback-juego"></div>
+      <p>🤖 Este juego usa números aleatorios, condicionales, entradas del usuario y mensajes con lógica. Te ayuda a practicar y entender cómo funciona un programa que piensa y responde.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alfabetización en Manejo de la Información · Módulo 5</p>
+    <a href="index.html" class="volver">Volver al inicio</a>
+  </footer>
+
+  <script>
+    // Botón para mostrar colores
+    document.getElementById("btn-ejecutar")?.addEventListener("click", () => {
+      let colores = ["🟥 Rojo", "🟩 Verde", "🟦 Azul"];
+      document.getElementById("resultado").innerText = colores.join(" - ");
+    });
+
+    // Juego de adivinanza
+    let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+    let intentos = 0;
+
+    document.getElementById("btn-adivinar")?.addEventListener("click", () => {
+      const input = document.getElementById("adivina-input");
+      const feedback = document.getElementById("feedback-juego");
+      const valor = parseInt(input.value);
+      intentos++;
+
+      if (valor === numeroSecreto) {
+        feedback.innerText = intentos === 1
+          ? "🎉 ¡Increíble! ¡Lo adivinaste al primer intento!"
+          : `✅ ¡Correcto! Lo lograste en ${intentos} intento(s)!`;
+        feedback.style.color = "green";
+      } else if (valor < numeroSecreto) {
+        feedback.innerText = "🔻 Demasiado bajo... probá un número más alto.";
+        feedback.style.color = "orange";
+      } else if (valor > numeroSecreto) {
+        feedback.innerText = "🔺 Muy alto... intentá un número más bajo.";
+        feedback.style.color = "orange";
+      } else {
+        feedback.innerText = "⛔ Ingresá un número válido.";
+        feedback.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>

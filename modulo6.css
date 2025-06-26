@@ -1,0 +1,100 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header {
+  background: #007acc;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+main {
+  padding: 20px;
+  max-width: 960px;
+  margin: auto;
+}
+
+h2 {
+  margin-top: 40px;
+  color: #007acc;
+}
+
+pre {
+  background: #eee;
+  padding: 10px;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+
+.flex-ejemplo {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.flex-ejemplo div {
+  background: #4fc3f7;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.grid-ejemplo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.grid-ejemplo div {
+  background: #ff8a65;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+a.volver {
+      display: inline-block;
+      margin-top: 2em;
+      text-align: center;
+      text-decoration: none;
+      background: #444;
+      color: white;
+      padding: 0.6em 1.2em;
+      border-radius: 6px;
+}
+
+a.volver:hover {
+      background: #222;
+}

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Módulo 4: CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="modulo4.css" />  
+</head>
+<body>
+
+  <header>
+    <h1>Módulo 4: CSS</h1>
+    <p>Explorá los fundamentos del diseño web moderno</p>
+  </header>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="#mod1">Módulo 1</a></li>
+      <li><a href="#mod2">Módulo 2</a></li>
+      <li><a href="#mod3">Módulo 3</a></li>
+      <li><a href="#mod4">Módulo 4</a></li>
+      <li><a href="#mod5">Módulo 5</a></li>
+      <li><a href="#mod6">Módulo 6</a></li>
+      <li><a href="#mod7">Módulo 7</a></li>
+      <li><a href="#mod8">Módulo 8</a></li>
+      <li><a href="#proyecto">Proyecto</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="modulo" id="mod1">
+        <h2>Módulo 1: Introducción a CSS</h2>
+        <p><strong>¿Qué es CSS?</strong> CSS (Cascading Style Sheets) es el lenguaje que usamos para darle estilo a las páginas web. Nos permite cambiar colores, tamaños, posiciones y mucho más, ¡para que todo se vea genial!</p>
+        <h3>¿Cómo lo usamos?</h3>
+        <p>CSS puede escribirse de 3 formas:</p>
+        <ul>
+            <li><strong>En línea</strong>: directamente en la etiqueta HTML.</li>
+            <li><strong>Interno</strong>: dentro del &lt;style&gt; en el &lt;head&gt;.</li>
+            <li><strong>Externo</strong>: en un archivo aparte con extensión <code>.css</code>.</li>
+        </ul>
+        <h3>Sintaxis básica</h3>
+        <pre style="background:#222;color:#eee;padding:10px;border-radius:5px;"><code>selector {
+         propiedad: valor;
+        }</code></pre>
+        <p>Por ejemplo:</p>
+        <pre style="background:#222;color:#eee;padding:10px;border-radius:5px;"><code>p {
+         color: red;
+         font-size: 18px;
+        }</code></pre>
+        <p>Esto cambia el color del texto de todos los &lt;p&gt; a rojo y el tamaño de letra.</p>
+
+        <h3>Selectores básicos</h3>
+        <ul>
+            <li><code>p</code>: selecciona todas las etiquetas &lt;p&gt;</li>
+            <li><code>.clase</code>: selecciona todos los elementos con class="clase"</li>
+            <li><code>#id</code>: selecciona el elemento con id="id"</li>
+        </ul>
+
+        <h3>💡 Tip del día</h3>
+        <p>¡La mejor forma de aprender CSS es probando! Cambiá colores, letras, tamaños y fijate cómo afecta el diseño.</p>
+
+        <h3>🧪 Mini Desafío</h3>
+        <p>Creá una página que tenga:</p>
+        <ul>
+            <li>Un título grande con color personalizado</li>
+            <li>Un párrafo con una fuente distinta</li>
+            <li>Una caja con fondo de color, borde redondeado y texto centrado</li>
+        </ul>
+        <p>¿Te animás? ¡Guardalo como <code>modulo1.html</code> y probalo en tu navegador!</p>
+    </div>
+
+    <div class="modulo" id="mod2">
+        <h2>Módulo 2: Colores y Tipografía</h2>
+
+
+        <h3>🎨 Colores en CSS</h3>
+        <p>Podés aplicar color a cualquier elemento usando la propiedad <code>color</code> (texto) y <code>background-color</code> (fondo).</p>
+
+        <h4>Formas de escribir colores:</h4>
+        <ul>
+            <li><strong>Nombre</strong>: <code>red</code>, <code>blue</code>, <code>green</code></li>
+            <li><strong>Hexadecimal</strong>: <code>#ff0000</code></li>
+            <li><strong>RGB</strong>: <code>rgb(255, 0, 0)</code></li>
+            <li><strong>HSL</strong>: <code>hsl(0, 100%, 50%)</code></li>
+        </ul>
+
+        <h4>Ejemplo:</h4>
+        <pre style="background:#222;color:#eee;padding:10px;border-radius:5px;"><code>body {
+         background-color: #121212;
+         color: white;
+        }
+
+        h1 {
+          color: #00d0ff;
+        }</code></pre>
+
+        <h3>🔠 Tipografía</h3>
+        <p>Para cambiar el estilo del texto usamos propiedades como:</p>
+        <ul>
+            <li><code>font-family</code>: tipo de letra</li>
+            <li><code>font-size</code>: tamaño</li>
+            <li><code>font-weight</code>: grosor (por ejemplo, <code>normal</code> o <code>bold</code>)</li>
+            <li><code>text-align</code>: alineación (por ejemplo, <code>left</code>, <code>center</code>, <code>right</code>)</li>
+        </ul>
+
+        <h4>Ejemplo:</h4>
+        <pre style="background:#222;color:#eee;padding:10px;border-radius:5px;"><code>p {
+         font-family: 'Arial', sans-serif;
+         font-size: 18px;
+         text-align: center;
+        }</code></pre>
+
+        <h3>💡 Tip útil</h3>
+        <p>¡Probá <a href="https://fonts.google.com" target="_blank">Google Fonts</a> para usar tipografías modernas en tu web!</p>
+
+        <h3>🧪 Mini Desafío</h3>
+        <p>Creá una página con los siguientes elementos:</p>
+        <ul>
+            <li>Un fondo oscuro y letras claras</li>
+            <li>Un título en una fuente personalizada</li>
+            <li>Un párrafo alineado al centro con color azul suave</li>
+        </ul>
+        <p>¡Guardalo como <code>modulo2.html</code> y jugá con los estilos para practicar!</p>
+    </div>
+
+    <div class="modulo" id="mod3">
+        <h2>Módulo 3: Modelo de Caja</h2>
+
+        <h3>📦 ¿Qué es el Box Model?</h3>
+        <p>En CSS, cada elemento se comporta como una <strong>caja</strong> compuesta por:</p>
+        <ul>
+            <li><strong>Contenido</strong>: lo que ves (texto, imagen, etc.)</li>
+            <li><strong>Padding (relleno)</strong>: espacio entre el contenido y el borde</li>
+            <li><strong>Border (borde)</strong>: el marco de la caja</li>
+            <li><strong>Margin (margen)</strong>: espacio externo respecto a otras cajas</li>
+        </ul>
+
+        <h3>🔍 Ejemplo visual</h3>
+        <div style="background:#fefefe; border: 3px solid #00d0ff; padding: 20px; margin: 20px 0; color: #000; border-radius: 6px;">
+          <p style="margin:0;">Esta es una caja con padding, borde y margen.</p>
+        </div>
+
+        <p>Su estructura se vería así:</p>
+        <pre style="background:#222; color:#eee; padding:10px; border-radius:5px;"><code>.caja {
+          margin: 20px;
+          padding: 20px;
+          border: 3px solid #00d0ff;
+        }</code></pre>
+
+        <h3>🧪 Mini Desafío</h3>
+        <p>Creá una tarjeta con tu nombre que tenga:</p>
+        <ul>
+            <li>Un margen externo de 30px</li>
+            <li>Padding de 15px</li>
+            <li>Borde de 2px con color personalizado</li>
+            <li>Fondo distinto del resto de la página</li>
+        </ul>
+        <p>Guardalo como <code>modulo3.html</code> y probalo. ¡Te vas a sorprender lo bien que se ve cuando entendés cómo funciona cada parte!</p>
+    </div>
+
+    <div class="modulo" id="mod4">
+        <h2>Módulo 4: Posicionamiento y Display</h2>
+
+        <h3>📐 Propiedad <code>display</code></h3>
+        <p>Determina cómo se muestra un elemento en la página. Los más comunes son:</p>
+        <ul>
+            <li><code>block</code>: ocupa todo el ancho (ej: &lt;div&gt;, &lt;p&gt;)</li>
+            <li><code>inline</code>: ocupa solo lo necesario (ej: &lt;span&gt;, &lt;a&gt;)</li>
+            <li><code>inline-block</code>: mezcla ambos comportamientos</li>
+            <li><code>none</code>: oculta el elemento</li>
+        </ul>
+
+        <h4>🔍 Ejemplo práctico:</h4>
+        <pre style="background:#222; color:#eee; padding:10px; border-radius:5px;"><code>.caja {
+          display: inline-block;
+          background-color: #00d0ff;
+          padding: 10px;
+          margin: 5px;
+        }</code></pre>
+
+        <div style="margin-top:10px;">
+            <span style="display:inline-block; background:#00d0ff; color:#000; padding:10px; margin:5px;">Caja 1</span>
+            <span style="display:inline-block; background:#00d0ff; color:#000; padding:10px; margin:5px;">Caja 2</span>
+            <span style="display:inline-block; background:#00d0ff; color:#000; padding:10px; margin:5px;">Caja 3</span>
+        </div>
+
+        <hr style="margin:30px 0; border:1px dashed #444;">
+
+        <h3>📌 Propiedad <code>position</code></h3>
+        <p>Permite mover elementos del lugar donde normalmente irían:</p>
+        <ul>
+            <li><code>static</code>: posición normal (por defecto)</li>
+            <li><code>relative</code>: se mueve desde su lugar original</li>
+            <li><code>absolute</code>: se posiciona respecto al elemento contenedor</li>
+            <li><code>fixed</code>: permanece fijo en pantalla al hacer scroll</li>
+        </ul>
+
+        <h4>🧭 Ejemplo interactivo:</h4>
+        <div style="position: relative; height: 150px; background: #1f1f1f; margin: 15px 0; border-radius: 6px;">
+            <div style="position: absolute; top: 10px; right: 10px; background: #ff4081; color:#000; padding: 10px; border-radius: 4px;">Botón flotante</div>
+            <div style="background:#333; color:white; padding:20px;">Esto es un contenedor con <code>position: relative</code>.</div>
+        </div>
+
+        <h3>🧪 Mini desafío</h3>
+        <p>Construí una tarjeta con un botón que aparezca arriba a la derecha, usando <code>position: absolute</code>. La tarjeta debe tener:</p>
+        <ul>
+            <li>Fondo oscuro y borde claro</li>
+            <li>Un título, un párrafo y un botón flotante</li>
+            <li>Diseño responsive con <code>display: block</code> o <code>inline-block</code> según el caso</li>
+        </ul>
+        <p>Guardalo como <code>modulo4.html</code> y subilo como ejercicio final del módulo.</p>
+    </div>
+
+    <div class="modulo" id="mod5">
+        <h2>Módulo 5: Flexbox</h2>
+
+        <h3>🧲 ¿Qué es Flexbox?</h3>
+        <p>Flexbox es una forma moderna de distribuir elementos de manera fácil y ordenada. Nos ayuda a alinear contenido en fila o columna sin complicaciones.</p>
+
+        <h3>🚀 ¿Cómo se usa?</h3>
+        <p>Primero aplicamos <code>display: flex</code> al contenedor. Luego usamos propiedades para alinear los elementos internos.</p>
+
+        <pre style="background:#222; color:#eee; padding:10px; border-radius:5px;"><code>.contenedor {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }</code></pre>
+
+        <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+            <div style="background:#00d0ff; padding:15px; border-radius:6px; color:black;">Caja 1</div>
+            <div style="background:#00d0ff; padding:15px; border-radius:6px; color:black;">Caja 2</div>
+            <div style="background:#00d0ff; padding:15px; border-radius:6px; color:black;">Caja 3</div>
+        </div>
+
+        <h4>🔧 Propiedades útiles:</h4>
+        <ul>
+            <li><code>justify-content</code>: alineación horizontal (<code>center</code>, <code>space-between</code>, <code>flex-end</code>...)</li>
+            <li><code>align-items</code>: alineación vertical (<code>stretch</code>, <code>center</code>, <code>flex-start</code>)</li>
+            <li><code>flex-direction</code>: dirección del eje (<code>row</code> o <code>column</code>)</li>
+            <li><code>flex-wrap</code>: permite que los elementos se acomoden si no entran</li>
+        </ul>
+
+  <h3>🧪 Mini desafío</h3>
+  <p>Creamos un tablero de "cartas mágicas". El desafío es alinear 4 cajas horizontalmente y que se ajusten en pantallas pequeñas:</p>
+  <ul>
+    <li>Contenedor con <code>display: flex</code> y <code>flex-wrap: wrap</code></li>
+    <li>Cada caja debe tener un color diferente</li>
+    <li>Al hacer hover, que crezcan un poquito con <code>transform: scale(1.05)</code></li>
+  </ul>
+
+  <p>Guardalo como <code>modulo5.html</code> y ¡que empiece el juego de alineación!</p>
+    </div>
+
+    <div class="modulo" id="mod6">
+  <h2>Módulo 6: Diseño Responsivo</h2>
+
+  <h3>📱 ¿Qué es el diseño responsivo?</h3>
+  <p>Significa que una web se adapta automáticamente a distintos tamaños de pantalla: computadora, celular o tablet. El objetivo es que el contenido siempre sea legible y funcional, sin importar el dispositivo.</p>
+
+  <h3>🔧 Herramientas clave</h3>
+  <ul>
+    <li><strong>Unidades flexibles:</strong> como <code>%</code>, <code>em</code>, <code>rem</code>, <code>vw</code>, <code>vh</code></li>
+    <li><strong>Media Queries:</strong> permiten cambiar estilos dependiendo del ancho de la pantalla</li>
+    <li><strong>Flexbox o Grid:</strong> ayudan a organizar el contenido fácilmente</li>
+  </ul>
+
+  <h4>🧪 Ejemplo con media query</h4>
+  <pre style="background:#222; color:#eee; padding:10px; border-radius:5px;"><code>/* Estilo por defecto */
+.caja {
+  background: #00d0ff;
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Cuando la pantalla es menor a 600px */
+@media (max-width: 600px) {
+  .caja {
+    background: #ff4081;
+    font-size: 14px;
+  }
+}</code></pre>
+
+  <div class="caja" style="background:#00d0ff; padding:20px; text-align:center; border-radius:6px; margin-top:10px;">
+    Probá cambiar el tamaño de la ventana 😉
+  </div>
+
+  <h3>🧪 Mini Desafío</h3>
+  <p>Construí una tarjeta de perfil que:</p>
+  <ul>
+    <li>Tenga una imagen (puede ser un círculo de color)</li>
+    <li>Incluya nombre, descripción y botón</li>
+    <li>En pantallas grandes esté centrada y con texto a la derecha</li>
+    <li>En celulares, que la información se acomode en columna</li>
+  </ul>
+
+  <p>Guardalo como <code>modulo6.html</code> y probalo en tu PC y tu celular para comprobar el resultado.</p>
+    </div>
+
+    <div class="modulo" id="mod7">
+  <h2>Módulo 7: Estilización Básica</h2>
+
+  <h3>🎨 Fondos</h3>
+  <p>Podés cambiar el fondo de cualquier elemento con <code>background-color</code> o usar imágenes con <code>background-image</code>.</p>
+  <pre style="background:#222;color:#eee;padding:10px;border-radius:5px;"><code>body {
+  background-color: #121212;
+}
+
+.banner {
+  background-image: url("fondo.jpg");
+  background-size: cover;
+}</code></pre>
+
+  <h3>🧱 Bordes y esquinas redondeadas</h3>
+  <p>Usá <code>border</code> y <code>border-radius</code> para dar forma y suavidad a los elementos.</p>
+  <pre style="background:#222;color:#eee;padding:10px;border-radius:5px;"><code>.tarjeta {
+  border: 2px solid #00d0ff;
+  border-radius: 8px;
+}</code></pre>
+
+  <h3>🕶️ Sombras</h3>
+  <ul>
+    <li><code>box-shadow</code>: sombra de una caja</li>
+    <li><code>text-shadow</code>: sombra del texto</li>
+  </ul>
+  <pre style="background:#222;color:#eee;padding:10px;border-radius:5px;"><code>.tarjeta {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-shadow: 2px 2px #000;
+}</code></pre>
+
+  <h3>✨ Hover y transiciones</h3>
+  <p>El pseudoestado <code>:hover</code> permite aplicar estilos al pasar el mouse. Para hacerlo suave, usás <code>transition</code>.</p>
+  <pre style="background:#222;color:#eee;padding:10px;border-radius:5px;"><code>.boton {
+  background-color: #00d0ff;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: #0090bb;
+}</code></pre>
+
+  <div style="margin-top: 20px;">
+    <button style="padding:10px 20px; background:#00d0ff; border:none; border-radius:5px; color:black; font-weight:bold; transition:background-color 0.3s; cursor:pointer;"
+            onmouseover="this.style.backgroundColor='#0090bb';"
+            onmouseout="this.style.backgroundColor='#00d0ff';">
+      ¡Probaló!
+    </button>
+  </div>
+
+  <h3>🧪 Mini desafío</h3>
+  <p>Diseñá una "tarjeta de personaje" que tenga:</p>
+  <ul>
+    <li>Una imagen de fondo o color vibrante</li>
+    <li>Nombre y descripción</li>
+    <li>Sombra y borde redondeado</li>
+    <li>Un botón con efecto hover y transición suave</li>
+  </ul>
+  <p>Guardalo como <code>modulo7.html</code>. ¡Este es tu primer paso al estilo profesional!</p>
+    </div>
+
+    <div class="modulo" id="mod8">
+  <h2>Módulo 8: Buenas Prácticas</h2>
+
+  <h3>🧼 ¿Por qué son importantes?</h3>
+  <p>Cuando tu proyecto crece, mantener un CSS ordenado es clave para no perder el control. Seguir buenas prácticas mejora la lectura, colaboración y rendimiento de tu código.</p>
+
+  <h3>📝 Organización del código</h3>
+  <ul>
+    <li>Agrupá estilos por sección (header, main, footer...)</li>
+    <li>Comentá bloques importantes para orientarte rápido</li>
+    <li>Usá nombres de clases claros y consistentes</li>
+    <li>Dejá espacios entre bloques de reglas para facilitar la lectura</li>
+  </ul>
+
+  <h4>Ejemplo de estructura:</h4>
+  <pre style="background:#222;color:#eee;padding:10px;border-radius:5px;"><code>/* ---- Header ---- */
+header {
+  background: #111;
+  padding: 20px;
+}
+
+/* ---- Botones ---- */
+.boton {
+  background: #00d0ff;
+  color: black;
+  padding: 10px;
+  }</code></pre>
+
+  <h3>🔁 Reusabilidad con clases</h3>
+  <p>No repitas estilos innecesariamente. Usá clases reutilizables como <code>.contenedor</code>, <code>.tarjeta</code> o <code>.boton</code> para aplicar estilos coherentes en distintas partes.</p>
+
+  <h3>🎯 Uso de variables CSS</h3>
+  <p>Podés definir colores y otros valores una sola vez usando variables. Así, si querés cambiar un color global, lo hacés en un solo lugar.</p>
+
+  <pre style="background:#222;color:#eee;padding:10px;border-radius:5px;"><code>:root {
+    --color-principal: #00d0ff;
+    --fondo: #0f0f0f;
+    }
+
+    .boton {
+      background-color: var(--color-principal);
+  }</code></pre>
+
+  <h3>🚫 Qué evitar</h3>
+  <ul>
+    <li>¡No uses nombres como <code>.caja1</code>, <code>.estiloazul</code> o <code>.nuevoDiv</code>! 😅</li>
+    <li>No copies y pegues estilos sin entenderlos</li>
+    <li>No mezcles demasiados estilos inline (en HTML)</li>
+  </ul>
+
+  <h3>🧪 Mini desafío</h3>
+  <p>Revisá tus estilos anteriores y mejorá al menos 3 cosas usando estas buenas prácticas:</p>
+  <ul>
+    <li>Agrupá tu código en secciones con comentarios</li>
+    <li>Renombrá clases poco claras</li>
+    <li>Cambiá colores o tamaños repetidos por variables</li>
+  </ul>
+
+  <p>💡 Guardalo como <code>modulo8.html</code> y usalo como base para el <strong>proyecto final</strong>. ¡Tus estilos ya no volverán a ser un lío!</p>
+    </div>
+
+    <div class="modulo" id="proyecto">
+  <h2>🎯 Proyecto Final: Tarjeta de Perfil Responsiva</h2>
+
+  <h3>Objetivo</h3>
+  <p>Construir una tarjeta visual con información personal que se adapte a dispositivos móviles y de escritorio.</p>
+
+  <h3>Diseño final esperado</h3>
+  <p>Usaremos lo aprendido en colores, tipografía, cajas, Flexbox, transiciones y responsividad.</p>
+
+  <h3>🔧 Código base de ejemplo:</h3>
+  <pre style="background:#222; color:#eee; padding:10px; border-radius:5px; overflow:auto;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Tarjeta de Perfil&lt;/title&gt;
+  &lt;style&gt;
+    :root {
+      --primario: #00d0ff;
+      --fondo: #1c1c1c;
+      --texto: #f2f2f2;
+    }
+
+    body {
+      background-color: var(--fondo);
+      color: var(--texto);
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .perfil {
+      background-color: #2a2a2a;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      gap: 20px;
+      max-width: 700px;
+      transition: transform 0.3s;
+    }
+
+    .perfil:hover {
+      transform: scale(1.02);
+    }
+
+    .foto {
+      background-color: var(--primario);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info h2 {
+      margin: 0 0 10px;
+    }
+
+    .boton {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: var(--primario);
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .boton:hover {
+      background-color: #00aacc;
+    }
+
+    @media (max-width: 600px) {
+      .perfil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .foto {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="perfil"&gt;
+    &lt;div class="foto"&gt;&lt;/div&gt;
+    &lt;div class="info"&gt;
+      &lt;h2&gt;Nombre del Alumno&lt;/h2&gt;
+      &lt;p&gt;Desarrollador principiante. Amante del diseño web y los botones que cambian de color.&lt;/p&gt;
+      &lt;button class="boton"&gt;Contacto&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <h3>🧪 Personalización sugerida</h3>
+  <ul>
+    <li>Reemplazar el círculo por una imagen real</li>
+    <li>Usar fuentes de Google (opcional)</li>
+    <li>Agregar redes sociales con íconos</li>
+    <li>Ampliar el contenido con habilidades o intereses</li>
+  </ul>
+
+  <p>Guardalo como <code>proyecto-final.html</code> y ¡mostrale al mundo tu estilo CSS! ✨</p>
+    </div>
+    <a href="index.html" class="btn btn-outline-primary mt-4">← Volver aal Inicio</a>
+
+  </section>
+
+  
+
+  <footer>
+    &copy; © 2025 Alfabetización en Manejo de la Información · Módulo 4
+  </footer>
+
+</body>
+</html>
