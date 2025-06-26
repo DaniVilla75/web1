@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alfabetización en Manejo de la Información</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><h2>Alfabetización en Manejo de la Información</h2></div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar módulo..." aria-label="Buscar módulo">
+      </div>
+    </nav>
+  </header>
+
+  <main id="modulos">
+    <section class="modulo" id="modulo1">
+      <h3>Módulo 1 Cultura Digital</h3>
+      <p>Contenidos, temas y objetivos.</p>
+      <button class="btn-contador" onclick="window.location.href='mod1.html'">Ver módulo</button>
+      <span class="contador">0 vistas</span>
+    </section>
+
+    <section class="modulo" id="modulo2">
+      <h3>Módulo 2 Introducción al Desarrollo Web</h3>
+      <p>Comprender cómo funcionan las páginas web y sus componentes básicos.</p>
+      <button class="btn-contador" onclick="window.location.href='mod2.html'">Ver módulo</button>
+      <span class="contador">0 vistas</span>
+    </section>
+
+    <section class="modulo" id="modulo3">
+      <h3>Módulo 3 HTML </h3>
+      <p>La Estructura de una Página Web.</p>
+      <button class="btn-contador" onclick="window.location.href='mod3.html'">Ver módulo</button>
+      <span class="contador">0 vistas</span>
+    </section>
+
+    <section class="modulo" id="modulo4">
+      <h3>Módulo 4 CSS</h3>
+      <p>Explorá los fundamentos del diseño web moderno.</p>
+      <button class="btn-contador" onclick="window.location.href='mod4.html'">Ver módulo</button>
+      <span class="contador">0 vistas</span>
+    </section>
+
+    <section class="modulo" id="modulo5">
+      <h3>Módulo 5 JavaScript</h3>
+      <p>Conceptos básicos para empezar a programar.</p>
+      <button class="btn-contador" onclick="window.location.href='mod5.html'">Ver módulo</button>
+      <span class="contador">0 vistas</span>
+    </section>
+
+    <section class="modulo" id="modulo5">
+      <h3>Módulo 6 Layout, Flexbox y Grid</h3>
+      <p>Diseñá interfaces modernas como un profesional.</p>
+      <button class="btn-contador" onclick="window.location.href='mod6.html'">Ver módulo</button>
+      <span class="contador">0 vistas</span>
+    </section>
+
+    <section class="modulo" id="modulo5">
+      <h3>Módulo Ejercicios</h3>
+      <p>Práctica lo visto.</p>
+      <button class="btn-contador" onclick="window.location.href='practica3.html'">Ver módulo</button>
+      <span class="contador">0 vistas</span>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Alfabetización en Manejo de la Información
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const modulos = document.querySelectorAll('.modulo');
+
+    searchInput.addEventListener('keyup', function () {
+      const filtro = this.value.toLowerCase();
+      modulos.forEach(modulo => {
+        const titulo = modulo.querySelector('h3').textContent.toLowerCase();
+        modulo.style.display = titulo.includes(filtro) ? 'block' : 'none';
+      });
+    });
+
+    const botones = document.querySelectorAll('.btn-contador');
+
+    botones.forEach(boton => {
+      boton.addEventListener('click', function () {
+        const contador = this.nextElementSibling;
+        let valor = parseInt(contador.textContent) || 0;
+        valor++;
+        contador.textContent = valor + ' vistas';
+      });
+    });
+  </script>
+</body>
+</html>
